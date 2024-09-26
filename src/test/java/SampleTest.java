@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 
 public class SampleTest extends BaseTest{
 
-
 // Sample test to check framework
     @Test
     public void amazonTest(){
