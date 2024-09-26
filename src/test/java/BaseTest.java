@@ -36,7 +36,7 @@ public class BaseTest {
         htmlReporter.config().setTheme(Theme.DARK);
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
-        extent.setSystemInfo("Automation Tester", "Diatoz");
+        extent.setSystemInfo("Automation Tester", "COMPANY_NAME");
     }
 
     @BeforeMethod
