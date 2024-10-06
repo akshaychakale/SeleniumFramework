@@ -4,6 +4,7 @@ import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 
 public class RetryAnalyzer implements IRetryAnalyzer {
+ //This utility class is created to retry the failed tests
     int count=0;
     int retryCount=1;
 
