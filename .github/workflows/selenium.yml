@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest  # Run on the latest Ubuntu environment
 
     services:
-      - name: selenium/standalone-chrome
+      selenium-chrome:
         image: selenium/standalone-chrome:latest
         options: --shm-size=2g  # Increase shared memory for Chrome
 
