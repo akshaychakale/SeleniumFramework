@@ -27,7 +27,7 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '11'  # Specify the version of Java (e.g., 11 or 17)
-          distribution: 'adoptopenjdk'  # You can also use OpenJDK or Zulu if you prefer
+          distribution: 'temurin'  # Use Temurin (formerly AdoptOpenJDK)
 
       # Cache Maven dependencies (optional but recommended to speed up builds)
       - name: Cache Maven dependencies
