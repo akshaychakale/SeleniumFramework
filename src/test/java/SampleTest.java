@@ -45,7 +45,7 @@ public class SampleTest extends BaseTest{
         WebElement continueButton=driver.findElement(By.xpath("//span[@id=\"continue\"]"));
         continueButton.click();
         WebElement password = driver.findElement(By.xpath("//input[@id='ap_password']"));
-        password.sendKeys("Passion@3567");
+        password.sendKeys("**********");
         WebElement signInButton =driver.findElement(By.xpath("//input[@id=\"signInSubmit\"]"));
         signInButton.click();
         WebElement searchBar = driver.findElement(By.xpath("//input[@id=\"twotabsearchtextbox\"]"));
