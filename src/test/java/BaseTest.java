@@ -15,7 +15,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
-
+import io.github.bonigarcia.wdm.WebDriverManager;
 import java.io.File;
 import java.lang.reflect.Method;
 import java.util.concurrent.TimeUnit;
@@ -76,14 +76,17 @@ public class BaseTest {
         public void setupDriver (String browserName){
 
             if (browserName.equalsIgnoreCase("chrome")) {
-                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "chromedriver.exe");
+                // System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "chromedriver.exe");
+                WebDriverManager.ChromeDriver.setup();
                 driver = new ChromeDriver();
 
             } else if (browserName.equalsIgnoreCase("firefox")) {
-                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "geckodriver.exe");
+                // System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "geckodriver.exe");
+                WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver();
             } else {
-                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "chromedriver.exe");
+                // System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "chromedriver.exe");
+                WebDriverManager.ChromeDriver.setup();
                 driver = new ChromeDriver();
             }
         }
